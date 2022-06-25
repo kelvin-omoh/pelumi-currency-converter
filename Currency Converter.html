@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="./Currency Converter.css"/>
+</head>
+  <div class="container">
+    <h1>currency converter</h1>
+
+    <div class="naira">
+
+      <input type="number" class="inaira" placeholder="enter naira">
+
+    </div>
+  note:  to convert to other currencies press submit
+    <div class="pound">
+
+      <input type="number" class="toPound" placeholder="pound">
+
+    </div>
+    <div class="dollar">Z
+
+      <input type="number" class="toDollar" placeholder="dollar">
+
+    </div>
+    <button class="submit" >submit</button>
+  </div>
+  <script>
+    let naira = document.querySelector(".inaira") ;
+    let pound = document.querySelector(".toPound") ;
+    let dollar = document.querySelector(".toDollar");
+    let btn = document.querySelector(".submit");
+
+    btn.addEventListener("click", ()=>{
+      dollar.value= Math.floor(naira.value/620);
+      pound.value=  Math.floor(naira.value/800);
+      
+    })
+  </script>
+
+</body>
+</html>
